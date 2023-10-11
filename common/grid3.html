@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* for style */
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        ul{
+            padding: 0;
+            list-style-type: none;
+            border: 5px solid teal;
+        }
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellow;
+            border: 5px solid tomato;
+            border-radius: 8px;
+        }
+
+        /* grid */
+        .container{
+            display: grid;
+            height: 500px;
+
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(2, 100px);
+
+            /* # align-items : 그리드 컨테이너 행 안에서 행 높이를 기준으로 그리드 아이템의 배치를 결정 */
+            /* stretch(기본값), start, end, center */
+            align-items: stretch;
+
+            /* # align-self : 그리드 아이템이 어떤 식으로 배치될 지 스스로 결정 */
+            /* stretch(기본값), start, end, center */
+
+            /* # justify-items : 그리드 컨테이너에 지정하며 열 안에서 그리드 아이템을 정렬 시 사용 */
+            /* stretch(기본값), start, end, center */
+            justify-items: stretch;
+            /* # justify-self : 그리드 아이템이 열 안에서 어떤 식으로 배치될 지 스스로 결정 */
+
+            /* 콘텐츠 속성은 트랙 안에 갇히지 않음 */
+            /* # align-content : 그리드 컨테이너의 수직축(열) 방향으로 요소 정렬, 여유 공간 있어야 눈에 보임 */
+            /* start, end, center, space-around, space-between, space-evenly */
+            align-content: space-evenly;
+            /* # justify-content : 그리드 컨테이너의 수평축(행) 방향으로 요소 정렬, 여유 공간 있어야 눈에 보임 */
+            /* start, end, center, space-around, space-between, space-evenly */
+            justify-content: space-evenly;
+        }
+        li:nth-child(1){
+        }
+        li:nth-child(2){
+            /* align-self: center; */
+            /* justify-self: end; */
+        }
+        li:nth-child(3){
+        }
+        li:nth-child(4){
+        }
+        li:nth-child(5){
+        }
+    </style>
+</head>
+<body>
+    <ul class="container">
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+        <li class="item">5</li>
+    </ul>
+</body>
+</html>
