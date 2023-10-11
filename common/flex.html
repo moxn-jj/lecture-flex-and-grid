@@ -17,11 +17,25 @@
             padding: 0;
             height: 200px;
             list-style-type: none;
+            border: 5px solid red;
 
             /* row(기본값), row-reverse, column, column-reverse */
             flex-direction: row;
             /* nowrap(기본값), wrap,  */
-            flex-wrap: wrap;
+            flex-wrap: nowrap ;
+            /* flex-start(기본값), flex-end, center, space-around, space-between, space-evenly */
+            justify-content: flex-start;
+            /* flex-wrap이 nowrap(기본값)일 때의 교차축 배치 방법 */
+            /* stretch(기본값), flex-start, flex-end, center */
+            align-items: stretch;
+            /* flex-wrap이 wrap일 때의 교차축 배치 방법, justify-content의 교차축 버전 */
+            /* flex-start(기본값), flex-end, center, space-around, space-between, space-evenly */
+            align-content: flex-start;
+        }
+        li:nth-child(3){
+            /* align-items와 같은 속성을 가짐 */
+            /* stretch(기본값), flex-start, flex-end, center */
+            align-self: stretch;
         }
     </style>
 
